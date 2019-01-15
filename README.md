@@ -1,6 +1,7 @@
 # PythonImagePlayground
 
 "scratchpad" contains trivial code. Used for dabbling and testing.
+
 "lib" contains library code.
 
 Helpful git commands, for self reference:
