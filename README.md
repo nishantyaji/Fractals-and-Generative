@@ -4,6 +4,10 @@
 
 "lib" contains library code.
 
+"generative" contains code for generative art.
+
+
+---------------------------------------------------------
 Helpful git commands, for self reference:
 
 git add
