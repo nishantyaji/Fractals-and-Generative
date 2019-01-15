@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, '../')
+
 from PIL import Image
 from math import sqrt
 import numpy as np
