@@ -1,4 +1,5 @@
 from PIL import Image
+from math import floor
 
 def shadeTriangle(vertices, color, img):
     """ Shades the triangle given by the vertices
@@ -12,11 +13,11 @@ def shadeTriangle(vertices, color, img):
 
     if (top[0] == left[0]) or (right[0] == top[0]):
         return
-        
+
     if isDegenerate(vertices):
         return
-    for x in range(left[0], round((left[0] + right[0])/2)):
-        y_ = round(left[1] + (x-left[0]) * (top[1]-left[1]) / (top[0] - left[0]))
+    for x in range(left[0], floor((left[0] + right[0])/2)):
+        y_ = floor(left[1] + (x-left[0]) * (top[1]-left[1]) / (top[0] - left[0]))
         if y_ < left[1]:
             step = 1
         else :
@@ -24,8 +25,8 @@ def shadeTriangle(vertices, color, img):
         for y in range(y_, left[1], step):
             img.putpixel((x,y), color)
 
-    for x in range(round((left[0] + right[0])/2), right[0]):
-        y_ = round(top[1] + (x-top[0]) * (right[1]-top[1]) / (right[0] - top[0]))
+    for x in range(floor((left[0] + right[0])/2), right[0]):
+        y_ = floor(top[1] + (x-top[0]) * (right[1]-top[1]) / (right[0] - top[0]))
         if y_ < right[1]:
             step = 1
         else:

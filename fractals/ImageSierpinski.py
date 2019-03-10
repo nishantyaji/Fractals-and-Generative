@@ -10,7 +10,7 @@ import lib.Triangle as triangle
 def doSierpinski(vertices, img, colors):
         left, top, right = vertices
 
-        if (abs(left[0] - right[0]) < 3) & (abs(left[1] - right[1]) < 3):
+        if (abs(left[0] - right[0]) < 2) & (abs(left[1] - right[1]) < 2):
             return
 
         leftmid = (left[0] + top[0])//2, (left[1] + top[1])//2 
@@ -28,7 +28,7 @@ def doSierpinski(vertices, img, colors):
 
 def display():
     size = (640,480)
-    defaultColour = (0,0,255)
+    defaultColour = (0,0,0)
     triangleColour = (0,255,0)
     leftVertex = (100, 350)
     side = 250
